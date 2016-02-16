@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+-->    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>William's Twilio Site</title>
+  </head>
+  <body>
+    <div id="top">
+
+      <h1>Hey!</h1>
+      <h2>Welcome to William's <font color="red">twilio</font> page:</h2>
+      <h3>Put your digits in below to recieve a message on your phone...</h3>
+      <p id="arrow">### -----> </p>
+      <%= form_tag "/twilio/send" do %>
+        <%= text_field "number", "Phone Number" %>
+        <%= submit_tag "Send" %>
+      <% end %>
+    <!--  <img id="twilio" src="assets/images/twilio1.jpg"/> -->
+    </div>
+  </body>
+</html>
+
+<!--
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+
+  <div class="container">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+  </div>
+</html>
+-->
+
+
+<!--
+<html>
+  <%= form_tag "/twilio/send" do %>
+    <%= text_field "number", "Phone Number" %>
+    <%= submit_tag "Send" %>
+  <% end %>
+</html>

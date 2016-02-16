@@ -1,0 +1,6 @@
+<html>
+  <%= form_tag "/twilio/send" do %>
+    <%= text_field "number", "Phone Number" %>
+    <%= submit_tag "Send" %>
+  <% end %>
+</html>
