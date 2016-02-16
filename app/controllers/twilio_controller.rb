@@ -13,11 +13,9 @@ class TwilioController < ApplicationController
     @number = validate_number
 
     if @number.length < 10
-      #render json: {message: "Your message failed!"}
-      #redirect_to action: 'show'
-      #render json: {message: "fail"} #flash[:error] = "Total fail!"
-      # render 'index'
-
+      flash[:error] = "Error: Please enter a valid 10 digit phone number."
+      redirect_to :back
+      return
       #Send error message
     end
     @client ||= Twilio::REST::Client.new
